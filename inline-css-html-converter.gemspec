@@ -13,6 +13,9 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
+  s.add_dependency 'httparty'
+  s.add_development_dependency "rspec"
+
   s.rubygems_version = '1.8.24'
   s.summary = 'convert css style to inline html'
   s.description = "convert css style to inline html"
