@@ -1,3 +1,5 @@
+require 'httparty'
+
 module InlineCssHtmlConverter
   class Worker
     API_VERSION = '2.0'
@@ -8,9 +10,6 @@ module InlineCssHtmlConverter
     end
 
     def perform
-      host = "https://#{@apikey.split('-')[1]}.api.mailchimp.com/#{API_VERSION}"
-
-      call_url = host + '/helper/inline-css.json'
       result = HTTParty.post(call_url,
                              query: parameters,
                              verify: false,
@@ -19,6 +18,11 @@ module InlineCssHtmlConverter
     end
 
     private
+
+    def call_url
+      host = "https://#{@apikey.split('-')[1]}.api.mailchimp.com/#{API_VERSION}"
+      host + '/helper/inline-css.json'
+    end
 
     def parameters
       {
