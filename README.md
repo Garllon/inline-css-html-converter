@@ -11,7 +11,8 @@ How it works
 ===
 
 ```
-gem 'inline-css-html-converter', git: 'https://github.com/Garllon/inline-css-html-converter.git'
+gem 'inline-css-html-converter',
+ git: 'https://github.com/Garllon/inline-css-html-converter.git'
 
 require 'inline-css-html-converter'
 ```
