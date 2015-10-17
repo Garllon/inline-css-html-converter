@@ -5,8 +5,16 @@ module InlineCssHtmlConverter
     API_VERSION = '2.0'
 
     def initialize(apikey, html)
+      raise NoApiKeyGivenError if apikey.nil?
+
       @apikey = apikey
       @html = html
+
+      if apikey.split('-').length == 2
+        @host = "https://#{apikey.split('-')[1]}.api.mailchimp.com/#{API_VERSION}"
+      else
+        raise InvalidApiKeyError, 'Your MailChimp API key must contain a suffix subdomain (e.g. "-us8").'
+      end
     end
 
     def perform
@@ -20,8 +28,7 @@ module InlineCssHtmlConverter
     private
 
     def call_url
-      host = "https://#{@apikey.split('-')[1]}.api.mailchimp.com/#{API_VERSION}"
-      host + '/helper/inline-css.json'
+      @host + '/helper/inline-css.json'
     end
 
     def parameters
