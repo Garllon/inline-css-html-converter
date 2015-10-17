@@ -1,5 +1,6 @@
 Inline CSS HTML Converter
 ==
+[![Build Status](https://travis-ci.org/Garllon/inline-css-html-converter.svg?branch=master)](https://travis-ci.org/Garllon/inline-css-html-converter)
 [![Code Climate](https://codeclimate.com/github/Garllon/inline-css-html-converter.png)](https://codeclimate.com/github/Garllon/inline-css-html-converter)
 
 I use the MailChimpAPI
@@ -9,6 +10,14 @@ At the moment i use the APi Version 2.0.
 
 How it works
 ===
+
+```
+gem 'inline-css-html-converter',
+ git: 'https://github.com/Garllon/inline-css-html-converter.git'
+
+require 'inline-css-html-converter'
+```
+
 
 ```
 InlineCssHtmlConverter::Worker.new(your_apikey, your_html).perform
