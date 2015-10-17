@@ -4,5 +4,8 @@ rvm:
 sudo: false
 notifications:
   email: false
+addons:
+  code_climate:
+      repo_token: a2c77798572c87bc61bff64ca625fffc2f39c8dda71fb9901a8fa41289d03a2d 
 
 script: bundle exec rspec

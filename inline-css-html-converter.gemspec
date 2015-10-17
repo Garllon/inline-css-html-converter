@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'httparty'
   s.add_development_dependency "rspec"
+  s.add_development_dependency "codeclimate-test-reporter"
 
   s.rubygems_version = '1.8.24'
   s.summary = 'convert css style to inline html'
