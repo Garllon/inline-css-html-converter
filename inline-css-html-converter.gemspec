@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_dependency 'httparty'
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "codeclimate-test-reporter"
-  s.add_development_dependency "pry"
+  s.add_dependency 'httparty', '~> 0.13.7'
+  s.add_development_dependency "rspec", '~> 3.3.0'
+  s.add_development_dependency "codeclimate-test-reporter", '~> 0.4.8'
+  s.add_development_dependency "pry", '~> 0.10.3'
 
   s.rubygems_version = '1.8.24'
   s.summary = 'convert css style to inline html'
