@@ -18,14 +18,18 @@ module InlineCssHtmlConverter
     end
 
     def perform
-      result = HTTParty.post(call_url,
-                             body: parameters.to_json,
-                             verify: true,
-                             headers: { 'Content-Type' => 'application/json' })
+      result = call_mailchimp
       result['html']
     end
 
     private
+
+    def call_mailchimp
+      HTTParty.post(call_url,
+                    body: parameters.to_json,
+                    verify: true,
+                    headers: { 'Content-Type' => 'application/json' })
+    end
 
     def call_url
       @host + '/helper/inline-css.json'
