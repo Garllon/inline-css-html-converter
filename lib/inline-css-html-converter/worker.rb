@@ -19,8 +19,8 @@ module InlineCssHtmlConverter
 
     def perform
       result = HTTParty.post(call_url,
-                             query: parameters,
-                             verify: false,
+                             body: parameters.to_json,
+                             verify: true,
                              headers: { 'Content-Type' => 'application/json' })
       result['html']
     end

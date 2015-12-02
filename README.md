@@ -11,6 +11,8 @@ At the moment i use the APi Version 2.0.
 How it works
 ===
 
+The Encoding of the files must be UTF-8 and the FileFormat must be unix.
+
 ```
 gem 'inline-css-html-converter',
  git: 'https://github.com/Garllon/inline-css-html-converter.git'
