@@ -26,6 +26,12 @@ require 'inline-css-html-converter'
 InlineCssHtmlConverter::Worker.new(your_apikey, your_html).perform
 ```
 
-In Progress
+## License
+
+InlineCssHtmlConverter is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
+In Progress(obsoleted)
 ===
 At the moment i work on a version, which works with MailChimp 3.0.
+
+MailChimp doesn't support this API endpoint any longer. :(
